@@ -1,5 +1,5 @@
 # Projektne faze
-- [ ] - Opis projekta
+- [X] - Opis projekta
 - [ ] - Početna struktura aplikacije
 - [ ] - Prototip
 - [ ] - Konzultacije
@@ -8,13 +8,19 @@
 
 # Opis projekta
 ## Kratki opis
-Ovdje ide opis projekta
+Bankovna aplikacija.
+Glavni opis:
+Aplikacija koja će voditi evidenicju o stanju trenutnog računa odnosno koliko ima trenutno 
+novaca i također evidencija o troškovima u formi liste dakle plaćanja koje će se voditi
+za svako plaćanje sa dodatnim podatcima (za što je plaćeno, kome i koliko te datum).
 
 ## Popis funkcionalnosti
-1. a
-2. b
-3. c
-
+Funkcionalnosti:
+Također će biti moguće izraditi vlastitu digitalnu karticu sa mogućnošću editovanja nekih podataka na kartici kao 
+što su tip kartice datum izdavanja, isteka i slično dakle tekstualni i vizualni elementi koje ima svaka kartica samo će to 
+sve biti prikazano u digitalnoj formi.
+Ulazni pin kako verifikacija korisnika - minimalna razina zaštite.
+Slanje novca sa glavnog računa nekom drugom korisniku.
 
 ## UPUTE
 ## Opis projekta
