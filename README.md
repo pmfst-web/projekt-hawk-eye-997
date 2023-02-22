@@ -1,6 +1,6 @@
 # Projektne faze
 - [X] - Opis projekta
-- [ ] - Početna struktura aplikacije
+- [X] - Početna struktura aplikacije
 - [ ] - Prototip
 - [ ] - Konzultacije
 - [ ] - Finalna verzija
@@ -16,17 +16,14 @@ za svako plaćanje sa dodatnim podatcima (za što je plaćeno, kome i koliko te 
 
 ## Popis funkcionalnosti
 Funkcionalnosti:
-Također će biti moguće izraditi vlastitu digitalnu karticu sa mogućnošću editovanja nekih podataka na kartici kao 
-što su tip kartice datum izdavanja, isteka i slično dakle tekstualni i vizualni elementi koje ima svaka kartica samo će to 
-sve biti prikazano u digitalnoj formi.
-Ulazni pin kako verifikacija korisnika - minimalna razina zaštite.
-Slanje novca sa glavnog računa nekom drugom korisniku.
+1.Ulazni pin kao verifikacija korisnika - minimalna razina zaštite.
+2.Slanje novca sa glavnog računa nekom drugom korisniku ili kupnja/potrošnja usluge ili nekog artikla.
+3.Na Centralnom ekranu izrađena kartica koja je responzivna prema troškovima koje korisnik bude radio.
 
 ## UPUTE
 ## Opis projekta
-Potrebno je napisati kratki opis projekta.
-Opis mora sadržavati popis osnovnih funkcionalnosti koje će biti implementirane (npr. "pretraživanje recepata", "unos novih recepta", "pretraživanje recepata po sastojcima" itd...)
-
+Projekt pod imenom My - Banking, aplikacija nalik bankovnim aplikacijama koje prate stanje glavnog računa i potrošnje korisnika.
+Funkcionalnosti - Korisnik ima određen iznos novaca  na računu i može rasolagati s novcem na način da troši novac na usluge u artikle te se vodi evidnecija u formi liste koja će se ispisivati za svaku transakciju. Pisat će opis transakcije i iznos.
 ## Početna struktura aplikacije
 Potrebno je inicijalizirati početnu strukturu mobilne aplikacije.
 Pod strukturom se podrazumijeva da definirate koliko različitih ekrana će sadržavati vaša aplikacija i osmislite navigaciju između tih ekrana koristeći jedan (ili više) pristupa koje smo obradili u vježbama.
