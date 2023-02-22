@@ -1,21 +1,46 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import {Provider} from 'react-redux';
+import {View, Text, ScrollView} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
-export default function App() {
+/* Ekrani - Komponente */
+import HomeScreen from './src/Components/HomeScreen';
+import DodajTransakciju from './src/Components/DodajTransakciju';
+import AnimatedExample from './AnimatedExample'
+
+/* Spremnik  */
+//import store from './src/store';
+
+const Stack = createStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <NavigationContainer>
+        <Stack.Navigator>
+        <Stack.Screen
+            name="Lozinka"
+            component={AnimatedExample}
+            options={{
+            title: 'Dobrodošao korisniče!',
+            }}
+          />
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{
+              title: 'MyBank - HomeScreen',
+            }}
+          />
+          <Stack.Screen
+            name="Dodaj"
+            component={DodajTransakciju}
+            options={{title: 'Nova Transakcija'}}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+   
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
