@@ -1,8 +1,9 @@
 import * as React from 'react';
-import {Provider} from 'react-redux';
 import {View, Text, ScrollView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+/*Redux*/
+import {Provider} from 'react-redux';
 
 /* Ekrani - Komponente */
 import HomeScreen from './src/Components/HomeScreen';
@@ -10,12 +11,13 @@ import DodajTransakciju from './src/Components/DodajTransakciju';
 import AnimatedExample from './AnimatedExample'
 
 /* Spremnik  */
-//import store from './src/store';
+import store from './src/store';
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
+    <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator>
         <Stack.Screen
@@ -26,7 +28,7 @@ function App() {
             }}
           />
           <Stack.Screen
-            name="Home"
+            name="Home" 
             component={HomeScreen}
             options={{
               title: 'MyBank - HomeScreen',
@@ -39,7 +41,7 @@ function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
-   
+   </Provider>
   );
 }
 
