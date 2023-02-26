@@ -8,7 +8,7 @@ import {Provider} from 'react-redux';
 /* Ekrani - Komponente */
 import HomeScreen from './src/Components/HomeScreen';
 import DodajTransakciju from './src/Components/DodajTransakciju';
-import AnimatedExample from './AnimatedExample'
+import AnimatedExample from './Lozinka'
 
 /* Spremnik  */
 import store from './src/store';

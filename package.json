@@ -1,25 +1,40 @@
 {
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
   "dependencies": {
+    "expo": "~46.0.19",
+    "expo-status-bar": "~1.4.0",
+    "react": "18.0.0",
+    "react-native": "0.69.6",
     "react-native-paper": "4.9.2",
     "@expo/vector-icons": "^13.0.0",
     "expo-constants": "~13.2.4",
-    "react-redux": "*",
-    "@types/react": "18.0.0",
-    "@types/react-dom": "18.0.0",
-    "redux": "4.0.0",
     "@react-navigation/native": "*",
     "@react-navigation/stack": "*",
     "react-native-gesture-handler": "~2.5.0",
     "react-native-safe-area-context": "4.3.1",
     "react-native-screens": "~3.15.0",
+    "react-redux": "*",
+    "@types/react": "18.0.0",
+    "@types/react-dom": "18.0.0",
     "react-native-confirmation-code-field": "*",
-    "redux-thunk": "*",
-    "native-base": "*",
-    "@types/react-native": "*",
-    "react-native-svg": "12.3.0",
-    "react-native-linear-gradient": "*",
+    "react-native-form-component": "*",
     "react-native-reanimated": "~2.9.1",
+    "redux": "4.0.0",
     "expo-linear-gradient": "~11.4.0",
-    "react-native-form-component": "*"
-  }
+    "@react-native-material/core": "*",
+    "native-base": "*",
+    "react-native-svg": "12.3.0",
+    "redux-thunk": "*",
+    "@types/react-native": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  },
+  "private": true
 }

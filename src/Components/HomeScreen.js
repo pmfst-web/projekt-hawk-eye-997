@@ -1,11 +1,31 @@
 import React from 'react';
-import {View, Text, FlatList, StyleSheet, SafeAreaView} from 'react-native';
+import {View, Text, FlatList, StyleSheet, SafeAreaView, StatusBar, CheckBox} from 'react-native';
 import Animated from 'react-native-reanimated';
-import {Container, ListItem, CheckBox, Body, Right,Button} from 'native-base';
+import {Container, Body, Right,Button} from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
 import { NativeBaseProvider } from 'native-base';
+import { ListItem } from "@react-native-material/core";
+import {useSelector, useDispatch} from 'react-redux';
+import Card  from './Parts/Card'
+import Empty from './Parts/Empty'
+import {ukloniTransakciju} from '../store/actions/transactionActions'
 
+function Item ({title,price,id,date})  {
+   const dispatch = useDispatch();
+   return( 
+   <View style={styles.item}>
+   <CheckBox color='#D2042D' onValueChange = {() => {
+     dispatch(ukloniTransakciju(id))
+   }}/>
+    <Text style={styles.title}>{title}</Text>
+    <Text style={{textAlign: 'right', color: price > 0 ? '#00008B':'#880808'}}> {price > 0 ?`€${price}` : `€${Math.abs(price)}` }</Text>
+    <Text style={{textAlign: 'center'}}>{date}</Text>
+  </View>
+  )
+}
+            
 const HomeScreen = ({navigation}) => {
+  const {transakcije} = useSelector(state => state.transakcije)
   return(
     <NativeBaseProvider>
     <SafeAreaView>
@@ -15,80 +35,44 @@ const HomeScreen = ({navigation}) => {
         paddingVertical: 10,
         paddingHorizontal: 20,
       }}>
-      <LinearGradient colors={['red', 'yellow', 'green']}
-      style={{...styles.Box}}
-      >
-      <View style = {{width:'70%', alignItems:'flex-start'}}>
-        <Text style={{fontSize: 15, color:'#fff', fontFamily:'Lato-Regular', fontWeight:'600,'}}>
-        Trenutno stanje računa:</Text>
-        <Text style = {{
-          fontFamily: 'Lato-Medium',
-          fontSize: 32,
-          color: '#fff',
-          fontWeight:'700'
-
-        }}>€5000</Text>
-        <Text style = {{
-          marginTop:67,
-          color: '#fff',
-          fontFamily: 'Lato-Regular',
-          fontSize: 18,
-          fontWeight: '700'
-        }}>1332 **** **** 9871</Text>
-      </View>
-      <View style={{
-        alignItems: 'flex-end',
-        width: '30%',
-      }}>
-      <Text style={{fontSize: 18, color: '#fff', fontFamily:'Lato-Regular'}}>
-      MYB
-      </Text>
-      <View style={{flex:1}}>
-        <Button 
-          rounded 
-          light style={{
-          padding: 10,
-          marginTop:32,
-          borderWidth:3,
-          borderColor: '#fff',
-          backgroundColor: '#0047AB',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }} onPress={() => {
-              navigation.navigate('Dodaj')}}>
-        
-        <Text style={{color: '#fff', fontWeight:'300',fontSize:10}}>Nova transakcija</Text>
-        </Button>
-                <Text style={{
-                marginTop:17,
-                color: '#fff',
-                fontSize: 10,
-                fontWeight: '700',
-                }}>Troškovi
-                </Text>
-              <Text style={{
-                  color:'#fff',
-                  fontSize:15,
-                  fontWeight:'700',
-                }}>€ 20000
-              </Text>
-            </View>
-          </View>        
-        </LinearGradient>  
+      <Card navigation={navigation}/>
       </Animated.View>
+      <View style={{flex:1}}>
+      {
+        transakcije.length > 0 ?
+        <FlatList
+        data={transakcije}
+        renderItem={({item}) => <Item title={item.title} price={item.price} id={item.id} date = {item.date}/>}
+        keyExtractor={item => item.id.toString()}
+      />:
+       <Empty/>  
+      }
+      </View>
     </SafeAreaView>
     </NativeBaseProvider>
   )
 };
 
 const styles = StyleSheet.create({
-  Box: {
-    width: '100%',
-    height: 189,
-    borderRadius: 15,
-    flexDirection: 'row',
-    padding: 22,
+
+  item: {
+    backgroundColor: '#f9c2ff',
+    padding: 15,
+    marginVertical: 15,
+    paddingHorizontal:15,
+    paddingVertical:15,
+    flex: 20,
+    marginTop: 20,
+    fontSize: 28,
+    fontWeight:'700',
   },
+  title:{
+    marginLeft:10,
+    fontSize:17,
+    fontWeight:'300',
+    textAlign:'left',
+    marginTop:20
+  }
 });
 
 export default HomeScreen;
