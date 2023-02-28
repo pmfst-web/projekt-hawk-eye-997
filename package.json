@@ -22,16 +22,15 @@
     "react-redux": "*",
     "@types/react": "18.0.0",
     "@types/react-dom": "18.0.0",
-    "react-native-confirmation-code-field": "*",
+    "redux": "4.0.0",
+    "redux-thunk": "*",
     "react-native-form-component": "*",
     "react-native-reanimated": "~2.9.1",
-    "redux": "4.0.0",
-    "expo-linear-gradient": "~11.4.0",
-    "@react-native-material/core": "*",
     "native-base": "*",
+    "@types/react-native": "*",
     "react-native-svg": "12.3.0",
-    "redux-thunk": "*",
-    "@types/react-native": "*"
+    "expo-linear-gradient": "~11.4.0",
+    "@react-native-material/core": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

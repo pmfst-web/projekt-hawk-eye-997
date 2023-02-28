@@ -18,17 +18,20 @@ const Home = ({ navigation }) => {
         <Text style={styles.naslovni}>Dobrodošli u aplikaciju MS-Banking</Text>
         <Image
           source={{uri: 'https://t4.ftcdn.net/jpg/04/53/70/41/240_F_453704176_fRLaZTHGmRZmM6BpZZe2PT17DBsjb4md.jpg'}}
-          style={{ width: 340, height: 230 }}
+          style={{ width: 340, height: 230, borderRadius:300, borderWidth:5, overflow:'hidden' }}
         />
         <Text style={styles.headerText}>Molim unesite lozinku za pristup!</Text>
         <TextInput
           style={{
             height: 45,
             width: '95%',
-            borderColor: 'gray',
-            borderWidth: 2,
+            borderColor: 'black',
+            borderWidth: 3,
             marginTop:25,
-            marginBottom:25
+            marginBottom:25,
+            backgroundColor: "white",
+            keyboardType:"numeric"
+
           }}
           placeholder="Mjesto lozinke:"
           underlineColorAndroid="transparent"
@@ -64,5 +67,9 @@ const styles = StyleSheet.create({
     alignItems: 'top',
     marginBottom:30
   },
+  button:{
+    borderRadius:100,
+    elevation:3
+  }
 
 });

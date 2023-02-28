@@ -1,5 +1,5 @@
 import React from 'react';
-import { LinearGradient } from 'expo-linear-gradient';
+import {LinearGradient } from 'expo-linear-gradient';
 import {View, Text, FlatList, StyleSheet, SafeAreaView, StatusBar} from 'react-native';
 import {Container, CheckBox, Body, Right,Button} from 'native-base';
 import {useSelector} from 'react-redux';

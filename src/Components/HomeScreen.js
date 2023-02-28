@@ -1,10 +1,9 @@
 import React from 'react';
 import {View, Text, FlatList, StyleSheet, SafeAreaView, StatusBar, CheckBox} from 'react-native';
 import Animated from 'react-native-reanimated';
-import {Container, Body, Right,Button} from 'native-base';
+import {Body, Right,Button} from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
 import { NativeBaseProvider } from 'native-base';
-import { ListItem } from "@react-native-material/core";
 import {useSelector, useDispatch} from 'react-redux';
 import Card  from './Parts/Card'
 import Empty from './Parts/Empty'
@@ -56,7 +55,7 @@ const HomeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
 
   item: {
-    backgroundColor: '#f9c2ff',
+    backgroundColor: '#FFBF00',
     padding: 15,
     marginVertical: 15,
     paddingHorizontal:15,
