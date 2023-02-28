@@ -29,3 +29,13 @@ Pocetak | Kraj
 ### Kratki opis promjena
 Treći Commit aplikacije. Danas sam nastavio sa implementacijom i testiranjem reduxa. Prvo sam radio sa fiksnim podatcima kako bi utvrdio prikazuju li mi se podatci na ispravan način putem liste na HomeScreenu. Nakon toga sam implementirao na trećem prozoru sučelje za dodavanje podataka o trasnakciji te klikom na botun napravio da se podatci prenesu na HomeScreen i tamo prikažu u formi liste. To je bila funkcionalnost dodavanja podataka pa sam na sličan način usput implementirao i brisanje koje nije navedeno u početnim specifikacijama, ali mi se činilo zgodno pa sam na listi dodao checkboxove putm kojih se podatci mogu brisati iz liste. Radio sam još neke prepravke na izgledu kartice, da valuta bude u eurima i da se sumiraju transakcije.
 Dovršena treća faza projekta.
+
+## 28.02.2023.
+Pocetak | Kraj
+------- | ----
+17:30   | 18:44
+### Kratki opis promjena
+Četvrti Commit aplikacije. Posljednja kontrola funkcionalnosti i provjera ispravnosti aplikacije. Radio sam još neke promjene css tipa nad botunima, textom, slikom i pozicijama objekata na ekranima aplikacije radi ljepšeg izgleda i ujednačenosti cijelokupne aplikacije. Sve radi kako treba i nema nikakvih poteškoća u radu aplikacije.
+Dovršena posljednja/ finalna verzija apliakcije.
+
+
